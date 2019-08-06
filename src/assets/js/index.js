@@ -2,7 +2,7 @@ import "../scss/main.scss";
 import * as d3 from "d3";
 
 //fetching data using promises
-let dataset = d3.json("src/assets/js/data.json").then(res => res.data);
+let dataset = d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json").then(res => res.data);
 dataset.then(data => {
   //event listener for responsive behaviour
   window.addEventListener("resize", render);
