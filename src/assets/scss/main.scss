@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text: white;
+  --bg: rgb(224, 218, 218);
+  --inverse-bg: #333;
+  --svg-bg: linear-gradient(
+    75deg,
+    rgba(177, 50, 160, 0.966),
+    rgba(147, 15, 223, 0.705)
+  );
+}
+@mixin respond-to($breakpoint) {
+  @media only screen and (min-width: $breakpoint + px) {
+    @content;
+  }
+}
+@mixin respond-to($breakpoint) {
+  @media only screen and (min-width: $breakpoint + px) {
+    @content;
+  }
+}
+
+.container {
+  text-align: center;
+  color: var(--text);
+
+  .display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+
+    &__title {
+      font-weight: bold;
+      color: rgb(64, 193, 233);
+      background: var(--inverse-bg);
+    }
+
+    &__svg {
+      background: var(--svg-bg);
+      box-shadow: 0 2px 4px #333;
+      text-align: center;
+    }
+  }
+
+  #tooltip {
+    background: rgba(47, 79, 79, 0.938);
+    pointer-events: none;
+    shape-rendering: crispEdges;
+    label {
+      color: var(--text);
+      b {
+        color: rgb(230, 88, 107);
+      }
+    }
+  }
+  #x-axis,
+  #y-axis {
+    font-weight: 600;
+    shape-rendering: crispEdges;
+  }
+
+  .y-axis-label {
+    font-size: 1.5em;
+    @include respond-to(768) {
+      font-size: 2em;
+    }
+  }
+}
