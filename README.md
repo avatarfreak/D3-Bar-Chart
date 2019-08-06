@@ -58,12 +58,8 @@ Project
 └───src
 │   │
 │   └───assets
-|        └───img
-│           └───favicon.ico
 │       └───js
 │           └───index.js
-│           └───data.json
-|           └───bundle.js
 │       └───scss
 │            └───main.scss
 │
