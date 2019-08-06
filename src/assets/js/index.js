@@ -150,12 +150,12 @@ function drawchart(data, selection, props) {
             <label>year: <b>${data[i][0].substring(0, 4)}</b> </label> 
             <br>
             <label>$<b>${data[i][1]} billion</b></label> 
-            `
+          `
         )
         .attr("data-date", data[i][0])
         .attr("data-gdp", data[i][1])
-        .style("left", `${d3.event.pagex}px`)
-        .style("top", `${d3.event.pagey}px`);
+        .style("left", `${d3.event.pageX}px`)
+        .style("top", `${d3.event.pageY}px`);
       d3.select(this).attr("fill", "white");
     })
     .on("mouseout", function() {
