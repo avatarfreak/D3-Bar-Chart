@@ -79,7 +79,7 @@ Project
 Clone this repo:
 
 ```
-$ git clone https://github.com/avatarfreak/bar-chart
+$ git clone https://github.com/avatarfreak/responsive-bar-chart
 ```
 
 Install all dependancies:
