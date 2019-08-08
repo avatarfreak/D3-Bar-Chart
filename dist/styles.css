@@ -57,6 +57,3 @@
     opacity: 0.1; }
   100% {
     opacity: 1; } }
-  #preloader.hidden {
-    opacity: 0;
-    animation: none; }
