@@ -4,8 +4,6 @@ import * as d3 from "d3";
 //fetching data using promises
 let dataset = d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json").then(res => res.data);
 dataset.then(data => {
-  //Hide preloader
-   document.getElementById("preloader").classList.add("hidden");
   //remove the preloader element
    document.getElementById("preloader").remove();
 

@@ -99,10 +99,4 @@
     opacity: 1;
   }
 }
-
-#preloader.hidden {
-  opacity: 0;
-  -webkit-animation: none;
-          animation: none;
-}
 /*# sourceMappingURL=main.css.map */
