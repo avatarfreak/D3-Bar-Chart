@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -46,26 +47,31 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "sass-loader" // compiles Sass to CSS, using Node Sass by default
-        ]
+        use: ExtractTextPlugin.extract({
+          use: [
+           
+            "css-loader", // translates CSS into CommonJS
+            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          ]
+        })
       }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './index.html',
+      template: "./src/index.html",
       filename: "./index.html",
       inject: true,
-      minify:{
-       removeComments: true,
-       collapseWhitespace: true, 
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
       }
     }),
+    new ExtractTextPlugin("styles.css"),
+    
     new MiniCssExtractPlugin({
-      filename: "assets/css/styles.css"
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ]
 };

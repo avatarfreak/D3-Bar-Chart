@@ -4,6 +4,11 @@ import * as d3 from "d3";
 //fetching data using promises
 let dataset = d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json").then(res => res.data);
 dataset.then(data => {
+  //Hide preloader
+   document.getElementById("preloader").classList.add("hidden");
+  //remove the preloader element
+   document.getElementById("preloader").remove();
+
   //event listener for responsive behaviour
   window.addEventListener("resize", render);
   //initail rendering of pages
@@ -26,6 +31,9 @@ dataset.then(data => {
 });
 
 //graph generator operation
+//data: datas information
+//selection: svg element
+//props: window dimension
 function drawchart(data, selection, props) {
   //destructing
   const { width, height, margin } = props;
@@ -175,6 +183,3 @@ function drawchart(data, selection, props) {
     .attr("y", d => innerHeight - d)
     .attr("height", d => d);
 }
-
-
-
