@@ -3,9 +3,7 @@
   padding: 0;
 }
 :root {
-  --text: white;
-  --bg: rgb(224, 218, 218);
-  --inverse-bg: #333;
+  --text: #b5b2ab;
   --svg-bg: linear-gradient(75deg, #f44336, #334452);
 }
 @mixin respond-to($breakpoint) {
@@ -33,14 +31,27 @@
 
     &__title {
       font-weight: bold;
-      color: rgb(64, 193, 233);
-      background: var(--inverse-bg);
     }
-
+    &__title,
     &__svg {
       background: var(--svg-bg);
+    }
+    &__svg {
       box-shadow: 0 2px 4px #333;
       text-align: center;
+    }
+  }
+  address {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: var(--title_text);
+    font-size: 11px;
+    #profile-link {
+      color: rgb(165, 226, 21);
+      text-decoration: none;
+      font-weight: bold;
     }
   }
 

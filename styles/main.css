@@ -4,9 +4,7 @@
 }
 
 :root {
-  --text: white;
-  --bg: rgb(224, 218, 218);
-  --inverse-bg: #333;
+  --text: #b5b2ab;
   --svg-bg: linear-gradient(75deg, #f44336, #334452);
 }
 
@@ -26,15 +24,31 @@
 
 .container .display__title {
   font-weight: bold;
-  color: #40c1e9;
-  background: var(--inverse-bg);
+}
+
+.container .display__title, .container .display__svg {
+  background: var(--svg-bg);
 }
 
 .container .display__svg {
-  background: var(--svg-bg);
   -webkit-box-shadow: 0 2px 4px #333;
           box-shadow: 0 2px 4px #333;
   text-align: center;
+}
+
+.container address {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: var(--title_text);
+  font-size: 11px;
+}
+
+.container address #profile-link {
+  color: #a5e215;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .container #tooltip {

@@ -105,11 +105,11 @@ function drawchart(data, selection, props) {
     .append("text")
     .attr("class", "y-axis-label")
     .merge(yaxislabel)
-    .attr("fill", "white")
-    .text("gross domestic product")
+    .attr("fill", "#dbd5c8")
+    .text("gdp")
     .attr("transform", "rotate(-90)")
     .attr("x", -innerHeight / 5)
-    .attr("y", -60);
+    .attr("y", 25);
   
     //creat linearscale
   const linearscale = d3
